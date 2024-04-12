@@ -92,7 +92,7 @@ const toggleDropDown = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-black font-bold mb-10 text-sm">&copy; 2024 SmartMarket Social Solution Services, Inc.</h1>{/*font-size 14px, text color black, font-bold, margin bottom 40px*/}
+      <h1 className="trademark">&copy; 2024 SmartMarket Social Solution Services, Inc.</h1>
     </div>
   )
 }

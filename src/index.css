@@ -179,3 +179,11 @@ a {
   text-center /*text horizontally centered*/
 }
 
+.trademark {
+  @apply
+  text-black /*text color black*/
+  font-bold 
+  mb-10 /*margin bottom 40px*/
+  text-sm /*font-size 14px*/
+}
+
