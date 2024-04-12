@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  @apply
+  hover:text-[aqua] /*text color becomes aqua when hovered over*/
+  duration-300 /*text color transitions over period of 300 milleseconds*/
+}
+
+.body {
+  @apply
+  flex flex-col /*vertical flexbox*/
+  items-center /*children centered along flexbox axis*/
+  w-screen /*width screen*/
+  text-white /*text color white*/
+  bg-amber-50 /*background color rgb(255 251 235)*/
+}
+
+.navbar {
+  @apply
+  flex /*horizontal flexbox*/
+  items-center /*children centered along flexbox axis*/
+  w-full /*width screen*/
+  bg-blue-950 /*background color rgb(23 37 84)*/
+  font-bold
+  h-32 /*height 128px*/
+  px-10 /*horizontal padding 40px*/
+  justify-between /*maximum spacing*/
+  fixed top-0 /*always stays at top of page*/
+}
+
+.navbar h1 {
+  @apply
+  text-4xl /*font-size 36px*/
+  italic
+}
+
+.navbar h1 span {
+  @apply 
+  text-[aqua] /*text color aqua*/
+}
+
+.navlinks {
+  @apply
+  hidden /*hidden if screen width < 1280px*/
+  xl:flex /*horizontal flexbox*/
+  items-center /*children centered along flexbox axis*/
+  gap-10 /*40px spacing*/
+  text-lg /*font-size 18px*/
+}
+
+.dropDownButton {
+  @apply
+  block /*visible if screen width < 1280px*/
+  xl:!hidden /*hidden if screen width >= 1280px*/
+}
+
+.dropDownButtonIcon {
+  @apply
+  !text-white /*text color white*/
+  !text-5xl /*font-size 48px*/
+}
+
+.dropDown {
+  @apply
+  xl:hidden /*hidden if screen width >= 1280px*/
+  flex flex-col /*vertical flexbox*/
+  gap-10 /*40px spacing*/
+  text-lg /*font-size 18px*/
+  w-96 /*width 384px*/
+  fixed top-32 right-0 /*always stays at right of page and 128px from top of page*/
+  bg-blue-900 /*background color rgb(30 58 138)*/
+  p-10 /*padding 40px*/
+}
+
+.hero {
+  @apply
+  object-cover /*object fit cover*/
+  mt-32 /*margin top 128px*/
+  w-full /*width screen*/
+  max-h-[800px] /*max height 800px*/
+  overflow-hidden /*hides content outside container bounds*/
+}
+
+.hero img {
+  @apply
+  w-full /*width screen*/
+  h-auto /*height keeps original ratio*/
+}
+
+.contentAndBenefits {
+  @apply
+  flex 
+  xl:flex-row /*horizontal flexbox if screen width >= 1280px*/
+  flex-col /*vertical flexbox if screen width < 1280px*/
+  items-center /*children centered along flexbox axis*/
+  xl:items-start /*children positioned at start of flexbox axis if screen width >= 1280px*/
+  w-full /*width screen*/
+  gap-10 /*spacing 40px*/
+  p-10 /*padding 40px*/
+}
+
+.content {
+  @apply 
+  flex flex-col /*vertical flexbox*/
+  gap-10 /*40px spacing*/
+  w-[80%] /*width 80% of screen*/
+  min-w-96 /*min width 384px*/
+}
+
+.content div {
+  @apply 
+  flex 
+  xl:flex-row /*horizontal flexbox if screen width >= 1280px*/
+  flex-col /*vertical flexbox if screen width < 1280px*/
+  items-center /*children centered along flexbox axis*/
+  px-5 /*horizontal padding 20px if screen width < 640px*/
+  py-10 /*vertical padding 40px*/
+  sm:px-10 /*horizontal padding 40px if screen width >= 640px*/
+  bg-blue-800 /*background color rgb(30 64 175)*/
+  rounded-xl /*border radius 12px*/
+}
+
+.content div img {
+  @apply 
+  max-w-80 /*max width 320px*/
+  h-fit /*height fit content*/
+  rounded-xl /*border radius 12px*/
+}
+
+.content div div {
+  @apply 
+  flex flex-col /*vertical flexbox*/
+  gap-5 /*20px spacing*/
+  xl:items-start /*children positioned at start of flexbox axis if screen width >= 1280px*/
+}
+
+.content div div h1 {
+  @apply 
+  text-xl /*font-size 20px*/
+  font-bold
+}
+
+.benefits {
+  @apply 
+  bg-blue-400 /*background color rgb(96, 165, 250)*/
+  p-10 /*padding 40px*/
+  flex flex-col /*vertical flexbox*/
+  gap-20 /*80px spacing*/
+  rounded-xl /*border radius 12px*/
+  w-96 /*width 384px*/
+}
+
+.benefits div {
+  @apply 
+  flex flex-col /*vertical flexbox*/
+  items-center /*children centered along flexbox axis*/
+}
+
+.benefits div h1 {
+  @apply 
+  text-xl /*font-size 20px*/
+  font-bold
+}
+
+.benefits div p {
+  @apply 
+  text-center /*text horizontally centered*/
+}
+
